@@ -65,7 +65,25 @@ console.log(myAgeInDogYears)
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight,age){
+    if(age >= 1){
+        if (weight <= 5){
+            let amount = weight * 0.05;
+            return amount
+        }else if (weight >= 6 && weight <= 10){
+        let amount = weight * 0.04;
+            return amount
+        }else if (weight >= 11 && weight <= 15){
+        let amount = weight * 0.03;
+            return amount
+        }else{
+            let amount = weight * 0.02
+            return amount
+        }
+    }
 
+}
+console.log(dogFeeder(15,1))
 
 
 
@@ -77,7 +95,10 @@ console.log(myAgeInDogYears)
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
 // let userChoice = prompt("Do you choose rock, paper or scissors?");
-let userChoice = "rock";
+
+
+ function rockpaperscissors(userChoice = ""){
+
 let computerChoice = Math.random();
 if (computerChoice < 0.34) {
     computerChoice = "rock";
@@ -87,7 +108,7 @@ if (computerChoice < 0.34) {
     computerChoice = "scissors";
 }
 
-let compare = function(userChoice, computerChoice) {
+ function compare(userChoice, computerChoice) {
     if(userChoice === computerChoice) {
     return "The result is a tie!";
 }
@@ -121,13 +142,17 @@ if (userChoice === "paper") {
 console.log("User Choice: " + userChoice);
 console.log("Computer Choice: " + computerChoice);
 console.log(compare(userChoice, computerChoice));
+ }
 
+console.log(rockpaperscissors("rock"))
   
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+
+
 let kilo = 30
 let mile = .621371
 
@@ -172,18 +197,24 @@ console.log(text)
 //60s should be D 
 //and anything below 60 should be F
   
-// let grade = 
 
-// if (grade >= 90) {
-//     return "A";
-// } else {
-// if (grade >= 90) 
-//     return "B";
-// } else {
-//     if (grade >= 70){
-//         return "C"
-//     }
-// }
+
+function gradeCalculator(score){
+    if (score >= 90){
+        return "A";
+    }else if(score <= 89 && score >= 80){
+        return "B";
+    }else if(score <= 79 && score >= 70){
+        return "C";
+    }else if(score <= 69 && score >= 60){
+        return "D";
+    }else{
+        return "F";
+    }
+    
+}
+
+console.log(gradeCalculator(88))
 
 
   
